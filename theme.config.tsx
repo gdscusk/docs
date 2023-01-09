@@ -2,11 +2,11 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <span>Lab Pemrograman Berbasis Web USK</span>,
+  logo: <span>Google Developer Student Clubs - USK</span>,
   project: {
-    link: "https://github.com/pbwusk/docs",
+    link: "https://github.com/gdscusk/docs",
   },
-  docsRepositoryBase: "https://github.com/pbwusk/docs",
+  docsRepositoryBase: "https://github.com/gdscusk/docs",
   footer: {
     text: (
       <p>
@@ -17,7 +17,7 @@ const config: DocsThemeConfig = {
           target="_blank"
           rel="noopener"
         >
-          Lab Pemrograman Berbasis Web - Informatika USK
+          Google Developer Student Clubs - USK
         </a>
         . Made with{" "}
         <a
