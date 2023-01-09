@@ -1,18 +1,36 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from "react";
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>Lab Pemrograman Berbasis Web USK</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: "https://github.com/pbwusk/docs",
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: "https://github.com/pbwusk/docs",
   footer: {
-    text: 'Nextra Docs Template',
+    text: (
+      <p>
+        © {new Date().getFullYear()}{" "}
+        <a
+          className="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:under]"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          Lab Pemrograman Berbasis Web - Informatika USK
+        </a>
+        . Made with{" "}
+        <a
+          className="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:under]"
+          href="https://nextra.site/"
+          target="_blank"
+          rel="noopener"
+        >
+          Nextra
+        </a>
+      </p>
+    ),
   },
-}
+};
 
-export default config
+export default config;
