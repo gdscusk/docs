@@ -82,6 +82,9 @@ const config: DocsThemeConfig = {
       </>
     );
   },
+  toc: {
+    extraContent: React.Fragment,
+  },
 };
 
 export default config;
