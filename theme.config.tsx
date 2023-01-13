@@ -7,6 +7,7 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/gdscusk/docs",
   },
+  primaryHue: 150,
   docsRepositoryBase: "https://github.com/gdscusk/docs",
   footer: {
     text: (
@@ -63,7 +64,7 @@ const config: DocsThemeConfig = {
           property="og:description"
           content="Help Students #GrowTogether by providing accessible teaching material. By Google Developer Student Clubs - Universitas Syiah Kuala"
         />
-        <meta property="og:image" content="/meta.jpg" />
+        <meta property="og:image" content="/images/meta.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="docs.gdscusk.com" />
         <meta
@@ -78,7 +79,11 @@ const config: DocsThemeConfig = {
           name="twitter:description"
           content="Help Students #GrowTogether by providing accessible teaching material. By Google Developer Student Clubs - Universitas Syiah Kuala"
         />
-        <meta name="twitter:image" content="/meta.jpg" />
+        <meta name="twitter:image" content="/images/meta.jpg" />
+        <link
+          rel="shortcut icon"
+          href="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_180,q_auto:good,w_180/v1/gcs/platform-data-dsc/contentbuilder/favicon.png"
+        />
       </>
     );
   },
