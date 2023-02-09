@@ -1,6 +1,6 @@
 {
-    "course-intro": "Introduction to Git & Github",
-    "Instalation":"Git Instalation",
-    "Git New Files" : "Git New Files"
+  "course-intro": "Introduction",
+  "git-and-github": "Git & Github",
+  "instalation": "Git Instalation",
+  "git-new-files": "Git New Files"
 }
-  
