@@ -2,5 +2,6 @@
   "course-intro": "Introduction",
   "git-and-github": "Git & Github",
   "installation": "Installation & Configuration",
-  "repository": "Repository"
+  "repository": "Repository",
+  "working-with-git": "Working with Git"
 }
