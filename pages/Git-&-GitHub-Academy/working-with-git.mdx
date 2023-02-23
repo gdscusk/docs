@@ -1,0 +1,153 @@
+import { Callout } from "nextra-theme-docs";
+
+# Working With Git
+
+Terdapat beberapa cara untuk bekerja dengan Git. Dapat menggunakan Git melalui command line, menggunakan GUI, atau menggunakan IDE.
+
+## Git basic commands
+
+### Git init
+
+Git init merupakan perintah yang digunakan untuk membuat repository baru. Perintah ini akan membuat folder .git yang berisi semua informasi tentang repository tersebut.
+
+```bash
+git init
+```
+
+### Git status
+
+Git status merupakan perintah yang digunakan untuk melihat status dari repository. Perintah ini akan menampilkan informasi seperti file yang sudah diubah, file yang belum diubah, dan file yang belum ditambahkan ke dalam staging area.
+
+```bash
+git status
+```
+
+### Git add
+
+Git add merupakan perintah yang digunakan untuk menambahkan file ke dalam staging area. Perintah ini dapat digunakan untuk menambahkan satu file atau lebih.
+
+```bash
+git add file.txt
+```
+
+Ganti file dengan nama file yang ingin ditambahkan ke dalam staging area.
+
+Jika ingin menambahkan semua file yang ada di dalam folder, maka bisa menggunakan perintah:
+
+```bash
+git add .
+```
+
+### Git commit
+
+Git commit merupakan perintah yang digunakan untuk menyimpan perubahan yang ada di dalam staging area ke dalam repository. Perintah ini juga akan membuat sebuah commit baru.
+
+```bash
+git commit -m "Initial commit"
+```
+
+Initial commit merupakan pesan yang akan ditampilkan di dalam commit tersebut.
+
+<Callout type="info">
+  **Conventional commit** Conventional commit merupakan sebuah standar yang
+  digunakan untuk membuat pesan commit. Standar ini digunakan untuk membuat
+  pesan commit yang lebih jelas dan mudah untuk dibaca. [**Klik disini untuk
+  membaca lebih lanjut**](https://www.conventionalcommits.org/en/v1.0.0/)
+</Callout>
+
+### Git Push
+
+Git push merupakan perintah yang digunakan untuk mengirimkan perubahan yang ada di dalam repository ke dalam remote repository. Perintah ini akan mengirimkan perubahan yang ada di dalam branch yang sedang aktif.
+
+```bash
+git push remote branch
+```
+
+Ganti remote dengan nama remote repository dan branch dengan nama branch yang ingin dikirimkan ke dalam remote repository.
+
+```bash
+git push origin main
+```
+
+Pada commnad di atas, origin merupakan nama remote repository dan main merupakan nama branch yang ingin dikirimkan ke dalam remote repository.
+
+### Git Pull
+
+Git pull merupakan perintah yang digunakan untuk mengambil perubahan yang ada di dalam remote repository ke dalam repository lokal. Perintah ini akan mengambil perubahan yang ada di dalam branch yang sedang aktif.
+
+```bash
+git pull remote branch
+```
+
+Ganti remote dengan nama remote repository dan branch dengan nama branch yang ingin diambil dari dalam remote repository.
+
+```bash
+git pull origin main
+```
+
+Pada commnad di atas, origin merupakan nama remote repository dan main merupakan nama branch yang ingin diambil dari dalam remote repository.
+
+### Git Clone
+
+Git clone merupakan perintah yang digunakan untuk mengambil repository dari remote repository ke dalam repository lokal. Perintah ini akan mengambil seluruh isi dari repository tersebut.
+
+```bash
+git clone url
+```
+
+Ganti url dengan url dari remote repository yang ingin diambil.
+
+```bash
+git clone https://github.com/gdscusk/link.git
+```
+
+### Git Branch
+
+Git branch merupakan perintah yang digunakan untuk membuat branch baru. Perintah ini akan membuat branch baru berdasarkan branch yang sedang aktif.
+
+Untuk membuat branch baru, bisa menggunakan perintah:
+
+```bash
+git branch branch_name
+```
+
+Ganti branch_name dengan nama branch yang ingin dibuat.
+
+### Git Checkout
+
+Git checkout merupakan perintah yang digunakan untuk berpindah antar branch. Perintah ini akan berpindah ke branch yang ditentukan.
+
+Untuk berpindah ke branch yang sudah ada, bisa menggunakan perintah:
+
+```bash
+git checkout branch_name
+```
+
+Ganti branch_name dengan nama branch yang ingin dipindah.
+
+Untuk membuat branch baru dan langsung berpindah ke branch tersebut, bisa menggunakan perintah:
+
+```bash
+git checkout -b branch_name
+```
+
+### Git Merge
+
+Git merge merupakan perintah yang digunakan untuk menggabungkan perubahan yang ada di dalam branch yang ditentukan ke dalam branch yang sedang aktif.
+
+```bash
+git merge branch_name
+```
+
+### Pull Request
+
+Pull request merupakan sebuah fitur yang ada di dalam GitHub. Fitur ini digunakan untuk meminta perubahan yang ada di dalam branch yang ditentukan untuk di gabungkan ke dalam branch yang ditentukan.
+
+Untuk membuat pull request bisa mengikuti langkah-langkah berikut:
+
+1. Pilih tab Pull requests
+2. Klik tombol New pull request
+3. Pilih branch yang ingin digabungkan ke dalam branch yang ditentukan
+4. Isi deskripsi pull request
+5. Klik tombol Create pull request
+

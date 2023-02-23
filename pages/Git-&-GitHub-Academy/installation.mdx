@@ -1,0 +1,51 @@
+# Git Installation & Configuration
+
+## Installation
+
+Download versi terbaru dari [git-scm.com](https://git-scm.com/) dan install sesuai petunjuknya.
+
+Windows: [git-scm.com/download/win](https://git-scm.com/download/win)  
+Linux: [git-scm.com/download/linux](https://git-scm.com/download/linux)  
+Mac: [git-scm.com/download/mac](https://git-scm.com/download/mac)
+
+## Configuration
+
+Setelah instalasi selesai, selanjutnya akan melakukan konfigurasi
+
+### User Configuration
+
+buka terminal dan ketikkan perintah berikut:
+
+```bash
+git config --global user.name "Your Name"
+```
+
+```bash
+git config --global user.email "Your@email.com"
+```
+
+Ganti Your Name dengan nama anda dan email anda.
+
+### Editor Configuration
+
+Personal Access Token (PAT) adalah token yang digunakan untuk mengakses repository di Github.
+
+Untuk membuat PAT, ikuti langkah-langkah berikut:
+
+1. Login ke akun Github anda
+2. Klik profile anda di pojok kanan atas
+3. Pilih **Settings**
+4. Pilih **Developer settings**
+5. Pilih **Personal access tokens**
+6. Pilih **Tokens (classic)**
+7. Klik **Generate new token**
+8. Pilih **Generate new token (classic)**
+9. Isi **Note** dengan nama token anda, expiration date sesuai kebutuhan anda, dan pilih scope sesuai kebutuhan anda.
+
+### Branch Configuration (Optional)
+
+Untuk mengubah branch default menjadi **main**, ketikkan perintah berikut:
+
+```bash
+git config --global init.defaultBranch main
+```
