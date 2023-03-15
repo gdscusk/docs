@@ -1,3 +1,5 @@
+import { Callout } from "nextra-theme-docs";
+
 #  Repository
 
 Repository merupakan tempat penyimpanan data yang berisi file-file yang dibutuhkan untuk menjalankan aplikasi. Repository ini dapat berupa file-file yang berada di dalam komputer, atau file-file yang berada di dalam server. 
@@ -26,10 +28,14 @@ Repository di GitHub merupakan repository yang berada di dalam server. Repositor
 ### 3. Menjadikan repository lokal kedalam repository di GitHub
 
   1. Buatlah sebuah repository di GitHub.
-  2. Copy link repository yang tadi sudah dibuat.
-  3. Pada repository local tambahkan remote dengan perintah: 
+  <Callout type="info">
+    Untuk menghindari terjadinya error ketika menambahkan remote repository, buatlah repository tanpa berisikan _README_, license ataupun file **gitignore**.
+  </Callout>
+  2. Copy url  repository yang tadi sudah dibuat.
+  3. Pada repository local tambahkan remote dengan perintah:
+
       ```bash
-      git remote add origin < REMOTE_URL > # <REMOTE_URL> url dari repo di buat pada github
+      git remote add origin REMOTE_URL # REMOTE_URL adalah url dari repo di buat pada github
       ```
       ```bash
       git remote -v # Untuk melihat semua remote yang terdaftar
