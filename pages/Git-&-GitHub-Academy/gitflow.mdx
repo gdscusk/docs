@@ -1,0 +1,41 @@
+import { Callout } from "nextra-theme-docs";
+
+# GitFlow
+
+## Apa itu GitFlow ?
+GitFlow adalah cara bekerja secara tim dengan menggunakan Git dan Github. GitFlow merupakan sebuah strategy dalam melakukan management branch yang digunakan dalam mengembangkan suatu project.
+
+## Main branch dan Development branch
+**Main branch** adalah branch utama yang menyimpan versi aplikasi yang sudah _release_ atau yang sudah digunakan pada saat ini.
+
+Untuk menjaga **main** branch yang sudah **_release_** tidak tergangu maka diperlukan sebuah branch baru untuk tempat dilakukannya pemgembangan aplikasi.
+Branch baru ini diberi nama dengan branch **Development**.  
+
+![Development Branch](/images/git-academy/development_branch.svg)
+
+Pengembangan aplikasi haruslah menggunakan branch **Development**. Hal ini bertujuan untuk menjaga branch **main** dari kesalahan ketika sedang melakukan pengembangan aplikasi.
+
+## Features Branch
+**Features Branch** adalah branch yang digunakan ketika mengembangkan suatu fitur pada sebuah aplikasi. Branch **Features** dibuat dari percabangan branch **Development**. Ketika suatu fitur telah selesai di dikerjakan maka branch akan merge ke branch **Development** dan branch **Features** akan dihapus.
+
+![Features Branch](/images/git-academy/features_branch.svg)
+
+Pada pengembangan suatu fitur, haruslah membuat sebuah branch tersendiri untuk melakukan pemgembangannya. Hal ini bertujuan untuk menjaga branch **Development** dari error dan ketika terjadi error dapat segera diketahui dari branch mana error tersebut berasal, sehingga perbaikan error dapat dilakukan hanya pada branch tersebut dan tidak mengganggu branch lainnya.
+
+<Callout type="info">
+Jika ingin mengetahui lebih dalam lagi mengenai **GitFlow** dapat membaca lebih lanjut. [**Klik disini untuk membaca lebih lanjut**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+</Callout>
+
+## Pull request untuk merge pada Github
+
+Ketika ingin melakukan merge kedalam branch **Development** dan **Main** lakukanlah dengan menggunakan fitur pull request yang ada pada Github. Hal ini bertujuan agar ketika ingin melakukan merge code yang sudah dibuat didalam branch **Features** dapat di review terlebih dahulu oleh programmer lain.
+
+Pull request merupakan sebuah fitur yang ada di dalam GitHub. Fitur ini digunakan untuk meminta perubahan yang ada di dalam branch yang ditentukan untuk di gabungkan ke dalam branch yang ditentukan.
+
+Untuk membuat pull request bisa mengikuti langkah-langkah berikut:
+
+1. Pilih tab Pull requests
+2. Klik tombol New pull request
+3. Pilih branch yang ingin digabungkan ke dalam branch yang ditentukan
+4. Isi deskripsi pull request
+5. Klik tombol Create pull request

@@ -3,5 +3,6 @@
   "git-and-github": "Git & Github",
   "installation": "Installation & Configuration",
   "repository": "Repository",
-  "working-with-git": "Working with Git"
+  "working-with-git": "Working with Git",
+  "gitflow": "Git Workflow"
 }
