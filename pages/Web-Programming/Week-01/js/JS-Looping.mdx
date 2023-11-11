@@ -1,0 +1,210 @@
+import { Callout } from "nextra-theme-docs";
+
+# JS Looping
+
+Cara untuk melakukan looping atau perulangan dalam JavaScript antara lain :
+
+## For Loop
+
+Strukturnya :
+
+```js
+for(inisialisasi variabel; test kondisi; perubahan nilai variabel) {
+ // do something
+}
+```
+
+> Keterangan :
+>
+> - Inisialisasi Variabel : Menginisialisasikan nilai awal dari perulangan
+> - Test Kondisi : melakukan pengecekan kondisi, jika bernilai true maka blok for akan dijalankan
+> - Perubahan nilai variabel : Disini akan dilakukan increment/decrement.
+
+## For of Loop
+
+Struktur dasarnya :
+
+```js
+for (arrayItem of myArray) {
+  // do something
+}
+```
+
+nilai seluruh array akan diisi ke variabel baru pada tiap proses looping, dimana jumlah proses looping akan disesuaikan dengan ukuran array. Contoh :
+
+```js
+let namaArray= ["Google", "Developer", “Students”, "Club"];
+
+for(const arrayItem of namaArray) {
+  console.log(arrayItem)
+}
+```
+
+> Output :
+>
+> Google\
+> Developer\
+> Students\
+> Club
+
+## For in Loop
+
+Struktur dasarnya :
+
+```js
+for (key in object) {
+  // code block to be executed
+}
+```
+
+Contoh :
+
+```js
+const person = { fname: "John", lname: "Doe", age: 25 };
+
+let text = "";
+for (let x in person) {
+  text += person[x];
+}
+```
+
+> Output :
+>
+> John Doe 25
+
+> Keterangan :
+>
+> - Loop for in mengulang melalui objek person.
+> - Setiap iterasi mengembalikan sebuah kunci, yang disebut sebagai x.
+> - Kunci (x) digunakan untuk mengakses nilai yang terkait dengan kunci tersebut.
+> - Nilai yang terkait dengan kunci diakses dengan menggunakan person[x].
+
+<Callout type="warning" emoji="⚠️">
+  Jangan gunakan for di atas Array jika urutan indeks penting. Urutan indeks
+  bergantung pada implementasi, dan nilai array mungkin tidak diakses sesuai
+  urutan yang Anda harapkan. Lebih baik menggunakan perulangan for, perulangan
+  for of, atau Array.forEach() jika urutannya penting.
+</Callout>
+
+## While and Do-While
+
+### While Loop
+
+Statement while memeriksa ekspresi boolean dan menjalankan kode pada blok while jika bernilai true.
+
+Struktur dasarnya :
+
+```js
+while (condition) {
+  // code block to be executed
+}
+```
+
+Contoh :
+
+```js
+let i = 0;
+let text = "";
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+```
+
+> Output :
+>
+> The number is 0\
+> The number is 1\
+> The number is 2\
+> The number is 3\
+> The number is 4\
+> The number is 5\
+> The number is 6\
+> The number is 7\
+> The number is 8\
+> The number is 9
+
+### Do While Loop
+
+Do-While, dimana boolean expressionnya akan diperiksa setelah blok kode berjalan sekali.
+
+Struktur dasarnya :
+
+```js
+do {
+  // code block to be executed
+} while (condition);
+```
+
+Contoh :
+
+```js
+let i = 0;
+let text = "";
+do {
+  text += "The number is " + i;
+  i++;
+} while (i < 10);
+```
+
+> Output :
+>
+> The number is 0\
+> The number is 1\
+> The number is 2\
+> The number is 3\
+> The number is 4\
+> The number is 5\
+> The number is 6\
+> The number is 7\
+> The number is 8\
+> The number is 9
+
+<Callout type="warning" emoji="⚠️">
+  Jangan lupa untuk menambah variabel yang digunakan dalam kondisi, jika tidak,
+  perulangan tidak akan pernah berakhir!
+</Callout>
+
+## Membandingkan For dan While
+
+Jika Anda telah membaca sebelumnya, tentang perulangan for, Anda akan menemukan bahwa perulangan while hampir sama dengan perulangan for, dengan pernyataan 1 dan pernyataan 3 dihilangkan.
+
+Perulangan dalam contoh ini menggunakan perulangan for untuk mengumpulkan potongan nama GDSC dari array gdsc:
+
+```js
+const gdsc = ["Google", "Developer", "Students", "Club"];
+let i = 0;
+let text = "";
+
+for (; gdsc[i]; ) {
+  text += gdsc[i];
+  i++;
+}
+```
+
+> Output :
+>
+> Google\
+> Developer\
+> Students\
+> Club
+
+Perulangan dalam contoh ini menggunakan perulangan while untuk mengumpulkan potongan nama GDSC dari array gdsc:
+
+```js
+const gdsc = ["Google", "Developer", "Students", "Club"];
+let i = 0;
+let text = "";
+
+while (gdsc[i]) {
+  text += gdsc[i];
+  i++;
+}
+```
+
+> Output :
+>
+> Google\
+> Developer\
+> Students\
+> Club

@@ -1,0 +1,40 @@
+---
+---
+
+# Pengantar JS
+
+## Pengertian & Gambaran Dasar JS
+
+JavaScript adalah bahasa pemrograman untuk pengembangan aplikasi web yang memberikan interaktivitas pada halaman web. Digunakan di sisi klien dan server, JavaScript bekerja bersama HTML dan CSS untuk menciptakan tampilan dan perilaku responsif.
+
+## Cara Membuat File JS
+
+Untuk membuat file JS, kita bisa menggunakan text editor seperti Notepad, Notepad++, Sublime Text, Visual Studio Code, Atom, dll. Setelah itu, kita bisa menyimpan file JS dengan ekstensi `.js` pada akhir nama file. Contoh nama file JS adalah `script.js`.
+
+## Contoh JS
+
+Berikut adalah contoh dari JS.
+
+```html copy filename="js example"
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+```
+
+```html copy filename="index.html"
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button
+      type="button"
+      onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'
+    >
+      Click Me!
+    </button>
+  </body>
+</html>
+```
+
+Untuk selengkapnya, akan dibahas pada materi selanjutnya yaitu [JS Variable](./JS-Variabel).
