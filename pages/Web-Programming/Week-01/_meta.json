@@ -2,5 +2,7 @@
   "index": "Introduction",
   "html": "HTML",
   "pre": "Pre-Class",
-  "post": "Post-Class"
+  "post": "Post-Class",
+  "css" : "CSS",
+  "js" : "JavaScript"
 }
