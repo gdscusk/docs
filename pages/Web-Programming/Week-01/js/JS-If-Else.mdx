@@ -1,0 +1,88 @@
+import { Callout } from "nextra-theme-docs";
+
+# If- Else Statement
+
+## If Statement
+
+Untuk memeriksa suatu kondisi pada JavaScript,digunakan statement _if_. Jika kondisi bernilai _true_, maka blok kode di dalamnya akan dijalankan. Sebaliknya, jika bernilai _false_, maka proses yang ditentukan akan dilewatkan. contoh :
+
+```js
+let x = 18;
+if(x > 10) {
+    console.log(x);
+}
+console.log(“ini bukan statement if”);
+```
+
+> Output:
+>
+> 18/
+> ini bukan statement if
+
+## Else Statement
+
+Jika ingin menjalankan operasi lain saat nilainya false, maka digunakan statement else, contoh:
+
+```js
+let x = 8;
+
+if (x > 10) {
+  console.log(x);
+} else {
+  console.log("x kurang dari 10");
+}
+```
+
+> Output:
+>
+> x kurang dari 10
+
+## Else If Statement
+
+Untuk mengecek beberapa kondisi sekaligus dapat dilakukan dengan menggabungkan else dan if. contoh :
+
+```js
+let x = 8;
+
+if(x > 15) {
+    console.log(“x lebih dari 15”);
+} else if (x > 10)  {
+    console.log("x lebih dari 10");
+} else if (x > 5) {
+    console.log("x lebih dari 5");
+}
+```
+
+> Output:
+>
+> x lebih dari 5
+
+## Ternary
+
+Selain itu, pada javascript juga dapat digunakan ternary operation. Dimana if else statement dapat dituliskan hanya dalam 1 baris. Contoh :
+
+```js
+let x = 8;
+console.log(x > 10 ? “x lebih dari 10” : “x kurang dari 10”);
+
+```
+
+> Output:
+>
+> x lebih dari 10
+
+<Callout type="info">
+  Setiap nilai pada JavaScript pada dasarnya mewarisi sifat boolean, dikenal
+  dengan truthy dan falsy.
+</Callout>
+
+> Selain nilai false, ada beberapa nilai yang dianggap falsy, yaitu :
+>
+> 1. Number 0
+> 2. BigInt 0n
+> 3. String kosong seperti “” atau ‘’
+> 4. null
+> 5. undefined
+> 6. NaN
+>
+> Selain nilai diatas, maka nilainya adalah truthy dan saat dieksekusi ke dalam if statement akan bernilai true

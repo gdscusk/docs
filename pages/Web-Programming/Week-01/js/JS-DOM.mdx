@@ -1,0 +1,141 @@
+import { Callout } from "nextra-theme-docs";
+
+# JavaScript HTML DOM
+
+Fungsi DOM pada JavaScript adalah untuk memanipulasi halaman website menjadi lebih dinamis, dengan cara mengambil, mengubah, menambah, maupun menghapus elemen HTML.
+
+## Mengakses Element HTML
+
+Ada beberapa cara yang dapat dilakukan:
+
+### Dengan ID
+
+Menggunakan method _getElementByID()_. contoh:
+
+```js
+let umurA = document.getElementById("umur").value;
+```
+
+> JavaScript DOM akan mengambil element html yang memiliki ID _umur_ lalu disimpan ke variabel _umurA_.
+
+### Dengan class
+
+Menggunakan method getElementsByClassName( ). contoh:
+
+```js
+let semuaClassHeader = document.getElementsByClassName("header");
+```
+
+> disini DOM JavaScript bisa mengambil semua elemen di bawah Class _header_. Untuk mengakses masing-masing element bisa menggunakan index, seperti array dalam mengakses element
+
+### Dengan nama tag
+
+Menggunakan method getElementsByTagName( ). contoh:
+
+```js
+let tagH1 = document.getElementsByTagName("h1");
+```
+
+> Semua element dengan tag h1 akan diambil. Untuk mengakses masing-masing element bisa menggunakan index.
+
+### Dengan query selector dan query selector all
+
+Menggunakan method _querySelector( )_ untuk query selector dan method _querySelectorAll( )_ untuk query selector all.
+
+#### Query Selector
+
+```js
+let queryP = document.querySelector("p");
+```
+
+#### Query Selector All
+
+```js
+let queryAllP = document.querySelectorAll("p");
+```
+
+<Callout type="info">
+  Perbedaan utama antara keduanya adalah dalam jumlah elemen yang diambil.
+  *querySelector()* mengambil elemen pertama yang cocok, sedangkan
+  *querySelectorAll()* mengambil semua elemen yang cocok.
+</Callout>
+
+## Mengubah Element HTML
+
+Untuk mengubah konten HTML dapat dilakukan dengan _innerHTML_, yang biasanya dikombinasikan dengan method-method untuk pemanggilan element. contoh :
+
+```html filename="html"
+<p id="demo">Hello, World!</p>
+```
+
+```js filename="js"
+let demo = document.getElementById("demo");
+demo.innerHTML = "Halo, Dunia!";
+```
+
+> Output :
+>
+> Halo, Dunia!
+
+Jika dilihat di website, element dengan id demo akan berubah menjadi “Halo, Dunia!”.
+
+Selain itu, dengan bentuk _element.attribute_ dapat dilakukan pengambil/pengubahan/penambahan nilai attribute dari sebuah element. Contoh :
+
+```js
+document.getElementsByTag("img").src = "image.jpg";
+```
+
+Maka, value src dari atribut img akan menjadi "image.jpg"
+atau dapat juga dilakukan dengan cara :
+
+```js
+let gambar = document.getElementsByTag("img");
+gambar.setAttribute("src", "image.jpg");
+```
+
+Berikutnya, dapat juga dilakukan pengambilan/pengubahan/penambahan CSS dari element HTML dengan bentuk :
+
+```js
+document.getElementById(id).style.property = new style();
+```
+
+Contoh:
+
+```js
+document.getElementsByTag(“h1”).style.color = “blue”
+```
+
+Maka semua element dengan tag h1 akan berubah warna tulisannya menjadi biru pada halaman website.
+
+## Menambah dan Menghapus Element HTML
+
+| Method                                 | Deskripsi             |
+| :------------------------------------- | :-------------------- |
+| createElement(_element_)               | Membuat elemen baru   |
+| removeChild(_element_)                 | Menghapus elemen      |
+| appendChild(_element_)                 | Menambah elemen       |
+| replaceChild(_newElement, oldElement_) | Mengganti elemen      |
+| write(_text_)                          | Menulis ke dalam HTML |
+
+## Event Handlers
+
+![Event Handlers](public/images/web/event.png)
+
+DOM pada JavaScript dapat digunakan untuk event handling. Ada beberapa event yang bisa ditemukan pada website, yaitu:
+
+- onchange
+- onclick
+- onmouseover
+- onmouseout
+- onkeydown
+- onload
+
+Misalnya untuk onclick, yaitu Event yang akan terjadi saat user klik suatu element HTML.
+
+```js
+document.getElementById("tombol").onclick = function () {
+  alert("Anda telah mengklik tombol!");
+};
+```
+
+> Pada contoh diatas, kita memiliki sebuah tombol dengan ID "tombol". Ketika tombol tersebut diklik oleh pengguna, maka event onclick akan terjadi, dan pesan "Anda telah mengklik tombol!" akan muncul dalam sebuah alert.

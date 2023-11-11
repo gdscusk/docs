@@ -1,0 +1,118 @@
+import { Callout } from "nextra-theme-docs";
+
+# JS Variabel
+
+Variabel merupakan sebuah nama yang mewakili suatu nilai. Variabel dalam javascript dapat dibuat dengan menggunakan kata kunci var, const, let, maupun tanpa kata kunci, kemudian diikuti oleh nama variabel dan nilainya.
+
+## Membuat Variabel JS
+
+- Automatically
+
+```js
+x = 5;
+y = 6;
+z = x + y;
+```
+
+- Using var
+
+```js
+var x = 5;
+var y = 6;
+var z = x + y;
+```
+
+- Using let
+
+```js
+let x = 5;
+let y = 6;
+let z = x + y;
+```
+
+- Using const
+
+```js
+const x = 5;
+const y = 6;
+const z = x + y;
+```
+
+> Keterangan:
+>
+> - var, const, let sebagai kata kunci
+> - x, y, dan z sebagai nama variabel
+> - = adalah operator assignment (penugasan).
+> - 5, 6 sebagai nilai yang dimasukkan ke variabel
+> - ; digunakan untuk mengakhiri statement.
+
+<Callout type="info" emoji="ℹ️">
+  Pada Javascript, Untuk variabel yang terdiri dari dua atau lebih suku kata
+  seperti contoh di atas, dianjurkan menggunakan *camelCase* dalam penamaan
+  (menggunakan huruf kapital). Jika suatu variabel tidak diberi nilai, maka akan
+  bernilai *undefined* (belum ditentukan).
+</Callout>
+
+## Mengisi Ulang dan Menghapus Variabel
+
+Dalam JavaScript, variabel yang dideklarasikan dengan menggunakan kata kunci var atau let dapat diisi ulang atau diubah nilainya. Contoh :
+
+```js
+var umur = 21;
+```
+
+dapat diubah nilainya menjadi :
+
+```js
+umur = 18;
+```
+
+> tanpa perlu menuliskan kata kunci var kembali. Hal yang sama berlaku untuk variabel dengan kata kunci let. Namun, berbeda dengan var dan let, variabel yang dideklarasikan dengan const tidak dapat diubah. Ini karena const digunakan untuk mendeklarasikan sebuah konstanta, yang berarti nilai yang diberikan pada saat deklarasi tidak dapat diubah atau diisi ulang di kemudian hari. Penggunaan const memberikan keamanan tambahan dalam kode dengan mencegah perubahan nilai secara tidak sengaja.
+
+Untuk menghapus variabel dapat digunakan keyword _delete_. Penghapusan variabel ini hanya bisa dilakukan untuk variabel tanpa kata kunci. Namun, penggunaan _delete_ pada variabel yang dideklarasikan dengan var, let, atau const tidak akan berdampak apa-apa dan nilai variabel tersebut akan tetap ada.
+
+## Menampilkan Variabel
+
+Untuk menampilkan isi variabel di JavaScript, kita bisa menggunakan beberapa fungsi.
+
+```js
+var umur = 20;
+```
+
+- Fungsi _console.log()_ menampilkan output ke konsol JavaScript, ideal untuk debugging.
+
+```js
+console.log(umur);
+```
+
+- _document.write()_ menulis output langsung ke dokumen HTML, berguna untuk menampilkan data pada halaman web.
+
+```js
+document.write(umur);
+```
+
+- Sedangkan _alert()_ menampilkan output dalam bentuk jendela dialog, cocok untuk notifikasi singkat.
+
+```js
+alert(umur);
+```
+
+## Data Tipe
+
+Javascript bersifat dynamic typing, artinya tipe data tidak perlu ditentukan saat mendeklarasikan variabel. Beberapa jenis tipe data dalam javascript yaitu :
+
+> 1. String (teks)
+> 2. Number (bilangan bulat)
+> 3. Boolean
+> 4. BigInt
+> 5. Symbol
+> 6. Null
+> 7. Undefined
+> 8. Object
+
+## Aturan Penulisan Variabel
+
+> 1. Tidak boleh diawali dengan angka
+> 2. Dapat terdiri dari huruf, angka, dan underscore (\_) dengan berbagai kombinasi.
+> 3. Tidak boleh mengandung spasi (whitespace). Jika penamaan variabel lebih dari dua kata, tuliskan secara camelCase. Contoh firstName, lastName, catName, dll.
+> 4. Tidak boleh mengandung karakter spesial (! . , / \ + \* = dll.)
