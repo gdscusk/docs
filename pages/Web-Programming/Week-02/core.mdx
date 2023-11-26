@@ -1,0 +1,48 @@
+# Core Concept TailwindCSS
+
+Dalam TailwindCSS terdapat beberapa konsep dasar dalam menggunakan framework ini.
+Berikut adalah beberapa konsep dasar dalam menggunakan TailwindCSS
+
+## Syntax
+Pada TailwindCSS menggunakan class untuk memasukkan style kedalam sebuah komponen.
+
+```html
+<div class="p-2 bg-yellow-500">
+    <p>Halo</p>
+</div>
+```
+
+## Breakpoint
+Dalam Tailwind CSS, breakpoint mengacu pada titik tertentu dalam rentang lebar layar yang digunakan untuk menentukan perubahan tata letak atau gaya pada elemen-elemen dalam desain responsif.
+```html
+<div class="p-2 bg-yellow-500 grid grid-cols-1 lg:grid-cols-2">
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <div>Div 4</div>
+    <div>Div 5</div>
+</div>
+```
+
+```lg:grid-cols-2``` adalah contoh penggunaan breakpoint. Pada perintah di samping
+jika layar memiliki resolusi ```lg (width: 1024px)``` maka tampilan akan berubah dari memiliki 1 kolom
+menjadi 2 kolom.
+
+Selengkapnya mengenai breakpoint dapat dilihat di [TailwindCSS Breakpoint](https://tailwindcss.com/docs/responsive-design)
+
+## State
+Pada TailwindCSS juga memiliki state seperti css pada umumnya, pada TailwindCSS menggunakan Pseudo-Class
+untuk menyatakan state.
+
+```html
+<button class="bg-sky-500 hover:bg-sky-700">
+  Save changes
+</button>
+```
+```html
+<button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+  Save changes
+</button>
+```
+
+Selengkapnya mengenai State dapat dilihat di [TailwindCSS State](https://tailwindcss.com/docs/hover-focus-and-other-states)

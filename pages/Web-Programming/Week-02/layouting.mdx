@@ -1,0 +1,84 @@
+# Layout
+
+Pada CSS kita mengenal 2 cara melakukan layouting, yaitu dengan menggunakan flex dan menggunakan grid.
+Pada TailwindCSS juga terdapat flex dan grid untuk melakukan layouting.
+
+## Flex
+
+Flexbox CSS, atau Flexible Box Layout Module, adalah sebuah modul CSS yang digunakan untuk mengatur elemen-elemen pada halaman web secara fleksibel dan responsif.
+
+```html
+<div class="flex">
+    <div class="p-2">1</div>
+    <div class="p-2">2</div>
+    <div class="p-2">3</div>
+</div>
+```
+
+```html
+<div class="flex flex-col">
+    <div class="p-2">1</div>
+    <div class="p-2">2</div>
+    <div class="p-2">3</div>
+</div>
+```
+
+```html
+<div class="flex flex-row">
+    <div class="p-2">1</div>
+    <div class="p-2">2</div>
+    <div class="p-2">3</div>
+</div>
+```
+Selengkapnya mengenai flex dapat dilihat di [TailwindCSS Flexbox](https://tailwindcss.com/docs/flex)
+
+## Grid
+CSS Grid Layout, atau CSS Grid, adalah sebuah modul CSS yang digunakan untuk mengatur elemen-elemen pada halaman web dalam bentuk grid.
+
+```html
+<div class="p-2 bg-yellow-500 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <div>Div 4</div>
+    <div>Div 5</div>
+    <div>Div 6</div>
+</div>
+```
+
+## Atribut tambahan untuk flex dan grid
+Pada flex dan grid juga terdapat beberapa atribut tambahan yang hanya dapat digunakan ketika menggunakan flex dan grid dalam komponen yang dibuat, atribut tambahan tersebut antara lain.
+
+### Gap
+```html
+<div class="flex gap-5">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+```
+
+### Justify
+```html
+<div class="flex gap-5 justify-start">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+```
+
+```html
+<div class="flex gap-5 justify-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+```
+
+```html
+<div class="flex gap-5 justify-end">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+```
